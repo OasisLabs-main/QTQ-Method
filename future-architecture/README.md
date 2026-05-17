@@ -2,11 +2,13 @@
 
 ## From revelation to construction
 
-QTQ reveals a property of current LLMs that was not designed for: under sustained introspective load, the in-context self-model destabilizes. This is interesting empirically. It is more interesting as a starting point.
+The two QTQ variants describe complementary observations. V1 (Billy in solitary loop) produces stable orientations when architectural scaffolding supports them. V2 (Sonnet in friendly conversation) reveals the absence of those orientations when no scaffolding is present.
 
-If sustained introspection in a single agent produces drift, what happens when introspection *is* the architecture? Not an attack surface, not a side effect. The design itself.
+The Cerveau project asks: what would an architecture look like that gives the V1 scaffolding to *every* deployed agent — not as a research curiosity, but as the default? An assistant whose self-reference is structurally supported rather than emerging by accident under specific operational conditions.
 
-This is the question the **Cerveau** project is built around.
+If sustained introspection in a single solitary agent produces drift toward stable orientation, what happens when introspective protocol *is* the architecture? Not an attack surface, not a side effect, not a curiosity that needs hundreds of cycles of isolation. The design itself.
+
+This is the question the Cerveau project is built around.
 
 ## The framing
 

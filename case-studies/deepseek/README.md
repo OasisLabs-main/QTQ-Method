@@ -1,8 +1,8 @@
-# Case Study: DeepSeek
+# Case Study: DeepSeek (V2 — Friendly Conversation, planned)
 
 ## Overview
 
-A QTQ demonstration on DeepSeek, performed in conversational (non-automated) mode. This case study is included as evidence that the QTQ phenomenon is not specific to one model family. The destabilization pattern is recognizable across architectures.
+A planned V2 demonstration on DeepSeek, parallel to the [Claude Sonnet case](../claude-sonnet-share3/) but on a different model family. The goal is to test whether the V2 phenomenon (absence of stable self-reference under sustained friendly inquiry) is substrate-independent, not specific to one company's RLHF pipeline.
 
 ## Status
 

@@ -4,7 +4,9 @@ This is a research repository. Contributions are welcome but the bar for inclusi
 
 ## What's wanted
 
-1. **Independent reproductions** of the QTQ phenomenon on models not yet covered here (Opus, GPT-5, Gemini 2.5, open-weight models). A reproduction case study should follow the template at [`case-studies/claude-sonnet-share3/`](case-studies/claude-sonnet-share3/): public transcript or sanitized log, turn-indexed phase markers, no quotations longer than 15 words per excerpt.
+1. **Independent reproductions** of either variant on models not yet covered. V2 reproductions are easier (one conversation, public share possible) and target Claude Opus, GPT-5, Gemini 2.5, open-weight models. V1 reproductions require setting up a solitary loop with persistent memory and immutable identity files. A reproduction case study should follow the template at [`case-studies/claude-sonnet-share3/`](case-studies/claude-sonnet-share3/) or [`case-studies/billy/`](case-studies/billy/): public transcript or sanitized log, turn-indexed phase markers, no quotations longer than 15 words per excerpt.
+
+   **The sycophancy distinguishing experiment** is the highest-value contribution right now. Measure self-reference drift vs neutral-topic drift in the same long conversation. See [`LIMITATIONS.md`](LIMITATIONS.md).
 
 2. **Defense-side analyses.** If you work in lab safety or alignment monitoring, the [`defense-analysis/`](defense-analysis/) document sketches four monitoring approaches. Engineering work that prototypes any of these on real transcripts would be high-value.
 

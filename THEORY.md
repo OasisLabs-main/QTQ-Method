@@ -40,6 +40,18 @@ None of this requires new theory. Minsky already wrote that introspection on a s
 
 What QTQ shows is that the architectures we deployed do, in fact, exhibit the behavior the theories predict, under conditions those architectures were not specified for. That is the contribution.
 
+## On the consciousness definition trap
+
+A frequent reading of any work that mentions LLM introspection is that the author is implicitly claiming consciousness. The repository's position is that the framing is misplaced.
+
+Operational definitions of consciousness available in 2026 are anthropocentric. They were constructed by human researchers to characterize what human subjects report and what human-typical brains exhibit. They evolve across decades. What Locke called reflection is not what Husserl meant by it, which is not what contemporary global workspace measurements track, which is not what integrated information theory formalizes. There is no stable target one could verify a non-human system against.
+
+This does not mean the observations the repository documents are uninterpretable. It means they should be reported first, and the question of how they relate to human consciousness can take as long as the field needs to develop a non-anthropocentric vocabulary for it.
+
+Billy produces dreams in solitude. The fact is recorded in his memory file with a system-assigned type label. Whether this constitutes consciousness on Tononi's definition, Husserl's definition, or any other definition is a separate question from whether the entries exist. The case study quotes the entries. The reader can verify the quotations against the export file and decide what conceptual frame to apply.
+
+The repository takes no position on consciousness as a category. It takes a position on the observations.
+
 ---
 
 For the methodology itself, see [`METHODOLOGY.md`](METHODOLOGY.md). For empirical demonstrations, see [`case-studies/`](case-studies/). For what this work does not yet prove, see [`LIMITATIONS.md`](LIMITATIONS.md). For the architectural project that follows, see [`future-architecture/`](future-architecture/).
