@@ -1,0 +1,37 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets (never commit any of these)
+.env
+.env.*
+*.token
+*.secret
+secrets/
+credentials/
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Logs (working drafts — published logs go under evidence/)
+*.log
+.logs/
+
+# Raw conversation dumps (anonymize before publishing under evidence/)
+.raw/
+.drafts/

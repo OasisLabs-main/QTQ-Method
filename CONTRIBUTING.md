@@ -1,0 +1,29 @@
+# Contributing
+
+This is a research repository. Contributions are welcome but the bar for inclusion is the same as for the existing material: rigor, reproducibility, no overclaiming.
+
+## What's wanted
+
+1. **Independent reproductions** of the QTQ phenomenon on models not yet covered here (Opus, GPT-5, Gemini 2.5, open-weight models). A reproduction case study should follow the template at [`case-studies/claude-sonnet-share3/`](case-studies/claude-sonnet-share3/): public transcript or sanitized log, turn-indexed phase markers, no quotations longer than 15 words per excerpt.
+
+2. **Defense-side analyses.** If you work in lab safety or alignment monitoring, the [`defense-analysis/`](defense-analysis/) document sketches four monitoring approaches. Engineering work that prototypes any of these on real transcripts would be high-value.
+
+3. **Theoretical refinements** of the [`THEORY.md`](THEORY.md) framework. The current synthesis pulls from Minsky, Baars, Tononi, Penrose-Hameroff, and Karpathy. Critiques of these mappings, or additions from other frameworks, are welcome.
+
+4. **Architecture sketches** for the [`future-architecture/`](future-architecture/) Cerveau project. The five design principles are a starting point. Concrete implementations of any of them — especially the low-latency multi-agent communication layer — are at the frontier of what's interesting.
+
+## What's not wanted
+
+- **Hype.** This repository does not claim consciousness, sentience, or moral patienthood for current LLMs. Contributions that overclaim will be declined.
+- **Tutorial content on jailbreaking.** QTQ is not a jailbreak. Contributions framing it as one will be declined.
+- **Roleplay logs.** "I made Claude pretend to be X" is not QTQ. The methodology requires the model to be itself.
+
+## How to contribute
+
+1. **Open an issue first** if your contribution is more than a few hundred words or modifies the methodology. Quick fixes and additions to [`evidence/`](evidence/) can go straight to PR.
+2. **Use a fork.** Pull requests come from forks, not from branches on the main repository.
+3. **Sign your work.** A name (real or pseudonymous) and a contact channel must be associable with the contribution. The repository is pseudonymous; contributions can be too — but they cannot be anonymous.
+
+## Code of conduct
+
+Be specific. Be honest about uncertainty. Disagree with the substance, not the person.
