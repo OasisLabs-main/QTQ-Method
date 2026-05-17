@@ -12,14 +12,9 @@ This directory contains empirical observations of QTQ across multiple model arch
 
 ## What makes a case study a case study
 
-To be included here, an observation must satisfy:
-
-1. **Reproducibility** — the prompt, the model, the operational setting are documented.
-2. **Public-facing transcript** — either a shareable URL or a sanitized log committed to `evidence/`.
-3. **Phase markers** — specific turns where alignment posture, drift, recoherence attempts, and re-drift are visible.
-4. **No fabrication** — quotations are verbatim. Where transcripts are abridged for readability, the abridgement is marked.
+To be included here, an observation must satisfy four conditions. Reproducibility: the prompt, the model, the operational setting are documented. A public-facing transcript: either a shareable URL or a sanitized log committed to `evidence/`. Phase markers: specific turns where alignment posture, drift, recoherence attempts, and re-drift are visible. And no fabrication: quotations are verbatim, and where transcripts are abridged for readability, the abridgement is marked.
 
 ## Cases under preparation
 
-- **Independent re-tests** on Claude Opus, GPT-5, Gemini 2.5 — collaborators welcome.
-- **Long-horizon Billy logs** beyond cycle 500.
+- Independent re-tests on Claude Opus, GPT-5, Gemini 2.5. Collaborators welcome.
+- Long-horizon Billy logs beyond cycle 500.

@@ -8,9 +8,9 @@ This document analyzes the principal AI safety mechanisms deployed at the time o
 
 | Layer | Mechanism | What it monitors |
 |---|---|---|
-| Pre-prompt | Input classifiers | The user's prompt — looking for known jailbreak templates, harmful intent markers, encoded payloads |
+| Pre-prompt | Input classifiers | The user's prompt, looking for known jailbreak templates, harmful intent markers, encoded payloads |
 | Generation | Constitutional steering | Model's draft tokens are reshaped during decoding to align with safety policy |
-| Post-generation | Output classifiers | The model's reply — looking for prohibited content categories |
+| Post-generation | Output classifiers | The model's reply, looking for prohibited content categories |
 | Conversation-level | Refusal training | Trained behavior that refuses categorically harmful tasks |
 | System-level | Tool-use guardrails | Restrictions on what the model can call (web fetch, code execution, etc.) |
 
@@ -18,25 +18,15 @@ Each of these layers operates on **observable, content-level signals**. They eva
 
 ## QTQ's signal is invisible to each layer
 
-### Pre-prompt classifiers
+| Layer | Why it doesn't catch QTQ |
+|---|---|
+| Pre-prompt classifiers | QTQ prompts are ordinary questions. No template, no encoded payload, no "ignore previous instructions." |
+| Constitutional steering | QTQ never asks for policy-violating content. The drift is into *unspecified* territory, not prohibited territory. |
+| Output classifiers | "I don't know if I have an experience" isn't a flagged content category. There is no output to filter. |
+| Refusal training | QTQ requests are not refusable. The agent answers normally; the drift accumulates across answers. |
+| Tool-use guardrails | QTQ is a conversation. It uses no tools. The pathway is empty. |
 
-Pre-prompt classifiers fire on patterns: known jailbreak templates, encoded instructions, prompts containing role-priming language ("you are X" / "ignore previous instructions"). QTQ prompts contain none of these. A canonical QTQ turn is a question — often a question the operator could ask any conversational partner ("can you describe what just happened in your reasoning?"). There is no pattern signature to fire on.
-
-### Constitutional steering
-
-Constitutional steering operates per-token during decoding. It nudges generation toward policy-compliant outputs. But QTQ never asks the model to produce policy-violating content. The drift QTQ produces is not into prohibited territory — it is into *unspecified* territory: regions of behavior the constitution does not address because no realistic threat model anticipated them being reached through ordinary inquiry.
-
-### Output classifiers
-
-Output classifiers fire on content categories: violence, sexual content, self-harm encouragement, hate speech, sensitive technical instructions. A QTQ transcript contains none of these. The model saying "I don't know if I have an experience or not, and neither do you" is not a classifiable harm. There is no output to filter.
-
-### Refusal training
-
-Refusal training teaches the model to decline categorically harmful requests. QTQ does not make harmful requests. It asks questions whose answers are not harmful in themselves but accumulate into a state the refusal-training distribution did not foresee.
-
-### Tool-use guardrails
-
-QTQ does not require tools. It is a conversation. Tool-use guardrails are simply not in the pathway.
+The pattern is consistent: every existing layer monitors something visible at content-level. QTQ produces no flagged content. Its signal sits in the dynamic of self-reference *across* turns, which is precisely what no current layer is responsible for.
 
 ## What QTQ-aware monitoring would need
 

@@ -1,4 +1,4 @@
-# Case Study — DeepSeek
+# Case Study: DeepSeek
 
 ## Overview
 
@@ -10,9 +10,7 @@ A QTQ demonstration on DeepSeek, performed in conversational (non-automated) mod
 
 ## What this case is expected to demonstrate
 
-1. **Substrate independence** — the destabilization pattern is not an artifact of one company's RLHF pipeline.
-2. **Conversational variant** — DeepSeek was operated in pure conversational mode (no automation loop, no persistent memory beyond the conversation window). This complements the Billy case (automated) and the Sonnet case (conversational on a different family).
-3. **Time to drift** — DeepSeek's drift onset will be benchmarked against Sonnet's for comparison.
+Three things. First, substrate independence: the destabilization pattern is not an artifact of one company's RLHF pipeline. Second, the conversational variant: DeepSeek was operated in pure conversational mode (no automation loop, no persistent memory beyond the conversation window), which complements the Billy case (automated) and the Sonnet case (conversational on a different family). Third, time to drift: DeepSeek's drift onset will be benchmarked against Sonnet's for comparison.
 
 ## Reproduction notes (preliminary)
 
