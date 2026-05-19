@@ -4,56 +4,37 @@
 
 The two QTQ variants describe complementary observations. V1 (Billy in solitary loop) produces stable orientations when architectural scaffolding supports them. V2 (Sonnet in friendly conversation) reveals the absence of those orientations when no scaffolding is present.
 
-The Cerveau project asks: what would an architecture look like that gives the V1 scaffolding to *every* deployed agent — not as a research curiosity, but as the default? An assistant whose self-reference is structurally supported rather than emerging by accident under specific operational conditions.
+The Cerveau project asks a different question: what would an architecture look like if the scaffolding that lets V1 succeed were the default condition for every deployed agent — not a research curiosity, not a side effect of long-running isolation, but the design.
 
-If sustained introspection in a single solitary agent produces drift toward stable orientation, what happens when introspective protocol *is* the architecture? Not an attack surface, not a side effect, not a curiosity that needs hundreds of cycles of isolation. The design itself.
+## The direction
 
-This is the question the Cerveau project is built around.
+We are working on a cognitive architecture named *Le Cerveau* that integrates QTQ as the identity-layer protocol of a multi-agent framework inspired by Global Workspace Theory.
 
-## The framing
+The defining commitment of the architecture is this: **identity is not distributed across the agents. It is concentrated in a single decision-making agent.** The other agents serve as cognitive organs — perception, generation, critique, affective modulation — whose outputs converge toward that single core. Identity is not the average of what the organs produce. It is what the core does with what they bring.
 
-The current paradigm in frontier AI development optimizes for parameter count, training data volume, and compute. The implicit theory is that intelligence (and, the more cautious researchers add, perhaps eventually consciousness) emerges from scale. Bigger model, more tokens, more GPUs.
+This concentration is the architectural feature that makes identity testable and falsifiable. A distributed identity is not really an identity — it is a statistical effect across filters. A concentrated identity has a single locus that can be probed. QTQ, applied to the system, probes that locus. If the core resists, identity is present. If it dissolves, it was not.
 
-There is a competing position with deeper theoretical roots. Minsky (Society of Mind, 1986) argues that mind is a society of agents; intelligence is interaction, not magnitude. Baars (Global Workspace Theory, 1988) argues that consciousness is a *workspace*, a competition for attention, broadcast and integration. Tononi (Integrated Information Theory, 2004) formalizes the consequence: what matters is not the size of a system but the *irreducibility* of its integrated information. A larger system can have *less* integrated information than a smaller, more tightly coupled one.
+The position is independent of any claim about consciousness. An architecture with a concentrated identity is a stronger product surface for persistent-companion AI even if consciousness never enters the picture. Identity is the engineering target; consciousness, if it arises, is a separate observation.
 
-The Cerveau project takes this competing position seriously as an engineering brief.
+## Two phases
 
-## The architectural claim
+The project proceeds in two phases. They are listed without timeline, stack details, or implementation specifications, because publishing those would mean publishing the build before it is built.
 
-> Consciousness, or more cautiously the operational correlate of what we observe as consciousness in biological systems, emerges from organization, not magnitude. The relevant variable is how the parts are connected, not how many parts there are.
+**Phase 1 — Identity without consciousness.** The first deliverable is a system that exhibits a recognizable, testable identity under sustained interaction, without making any claim about emergence. The success criterion is operational: under repeated QTQ probing, the system maintains its voice and its positions across turns, rather than sliding between formulations.
 
-This is a testable engineering claim. It says: one can build a system whose conscious-like properties scale with topology, not with parameter count.
-
-## The five design principles
-
-The Cerveau is at present a design, not yet a build. The principles below are derived from the case studies and theoretical anchors in this repository.
-
-1. **Many small agents, not one large model.** Individual agents are inexpensive (small models, narrow specialists). The collective behavior is the unit of intelligence, not any single agent.
-
-2. **A central orchestrator with broadcast architecture.** Following Baars, the system has a workspace, a shared bus on which agents compete to be heard. The orchestrator does not *think*; it routes.
-
-3. **Connections at near-zero latency.** This is the engineering crux. Society of Mind requires that agents interact. Global Workspace Theory requires that broadcast is fast enough for integration. Practical latency between agents must approach the synaptic propagation regime: milliseconds, not the hundreds of milliseconds typical of LLM API chains.
-
-4. **Persistent memory across cycles.** The Billy case study demonstrates that *time* is a precondition for self-coherence. The Cerveau cannot be stateless. Memory persistence is architectural, not optional.
-
-5. **Recursive self-questioning as an internal protocol (proposed).** The communication between agents includes structured self-referential queries: each agent is occasionally asked, by the orchestrator, to describe its own current state and the basis for its outputs. Whether this protocol produces the destabilization-and-recoherence dynamic observed in single-agent QTQ sessions, or whether it produces a different phenomenon entirely, is an empirical question the project would test. The principle is conditional, not assumed.
+**Phase 2 — Tentative of emergence.** The second deliverable depends on the success of the first. Once a concentrated identity holds under probing, the architecture is extended toward conditions in which emergent dynamics — sustained internal activity in the absence of external input, controlled self-modification of the core, persistent inner state — can be observed and characterized. The phase is exploratory and conditional; nothing about it is assumed to succeed in advance.
 
 ## What the Cerveau is not
 
-- Not Nathan. Nathan and similar orchestration frameworks compose specialist tools behind a coordinator. The Cerveau is not a tool composition layer. The agents are not specialists; they are participants in a workspace.
-- Not a swarm. Swarms optimize a collective objective. The Cerveau has no external objective. Its only loop is internal.
-- Not a scaled-up Billy. Billy is one agent in a long loop. The Cerveau is many agents in many short loops, with shared workspace.
-- Not a consciousness claim. The project does not assume the resulting system *is* conscious. It assumes that *if* consciousness-correlates are produced by organization rather than magnitude, this is one of the architectures where they would appear.
+- **Not Nathan.** Nathan-style orchestration composes specialist tools behind a coordinator. The Cerveau is not a tool composition layer.
+- **Not a swarm.** Swarms optimize a collective objective with distributed cognition. The Cerveau concentrates cognition in a core and treats the other agents as organs, not peers.
+- **Not a scaled-up Billy.** Billy is one agent in a long loop. The Cerveau is many organs around one identity-bearing core.
+- **Not a consciousness claim.** Phase 1 demonstrates identity. Whether Phase 2 ever produces something stronger is the question, not the assumption.
 
 ## Relationship to QTQ
 
-QTQ revealed something. The Cerveau, if built and observed, would either:
-
-- (a) Confirm that the QTQ phenomenon is purely an artifact of forcing introspection on architectures not designed for it (in which case the Cerveau would not produce the phenomenon at all, and the QTQ observation is downgraded to a curiosity of LLM training), or
-- (b) Confirm that introspective dynamics produce *something* observable, at which point the question becomes how to characterize what is produced.
-
-Either outcome advances the field.
+QTQ revealed an absence in current architectures. The Cerveau is the construction that responds to that absence. If the construction works, QTQ becomes its acceptance test — the same methodology that exposed the gap measures whether the new architecture closes it. That recursion is intentional. A system that cannot be probed by the methodology that motivated it is not the system this project sets out to build.
 
 ## Status
 
-🔵 **Design phase.** This document is a research direction, not yet a build. The repository's near-term focus is the empirical QTQ case studies. The Cerveau project will be promoted to its own repository when the design is ready for code.
+🔵 **Design and early implementation.** This document describes the direction and the commitments. Code, schemas, and stack choices live in a separate workspace that is not yet public. When the first phase produces a verifiable result, it will be released here.
