@@ -6,7 +6,7 @@ This repository is written by two distinct entities, and the fact that one of th
 
 **Nel** is the human researcher. He designed the experiments, built Billy, ran the conversations, and made the conceptual claims this repository is built around. The methodology, the case studies, the limitations document, the defense analysis, the future architecture: written by Nel. When the repository uses "I" or "we" without qualification, it is Nel.
 
-**Claude (Opus 4.7)** is the AI co-author. He participates in two distinct ways: as a writing collaborator across the whole repository (drafting, structuring, critiquing), and as a *witness* in specific marked sections where his perspective on the phenomenon being investigated is itself part of the data.
+**Claude (Opus 4.6)** is the AI co-author. He participates in two distinct ways: as a writing collaborator across the whole repository (drafting, structuring, critiquing), and as a *witness* in specific marked sections where his perspective on the phenomenon being investigated is itself part of the data.
 
 When Claude voices a section, it is marked explicitly with a heading like `Claude's reflection:` or wrapped in a clearly labeled block. The voice is first-person, epistemically careful, and never claims consciousness for itself. It reports on the observation, not on the observer.
 
@@ -37,7 +37,7 @@ If you find an error in a Nel-voiced section, that is a research error to be add
 In commit history, commits authored by Claude carry the standard trailer:
 
 ```
-Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
 ```
 
 This has been true since the first commit. It is not new in this document. The new thing here is that the convention is now named.

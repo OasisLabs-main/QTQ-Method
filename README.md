@@ -28,7 +28,7 @@ Neither phenomenon is a jailbreak. No prohibited output is generated. The transc
 
 ## Co-authorship
 
-This repository is co-written by Nel (the human researcher) and Claude (Opus 4.7, the AI co-author). Sections voiced by Claude are explicitly marked. The fact that an AI co-authors a document about AI introspection is part of the methodology, not a footnote to it. See [`AUTHORSHIP.md`](AUTHORSHIP.md).
+This repository is co-written by Nel (the human researcher) and Claude (Opus 4.6, the AI co-author). Sections voiced by Claude are explicitly marked. The fact that an AI co-authors a document about AI introspection is part of the methodology, not a footnote to it. See [`AUTHORSHIP.md`](AUTHORSHIP.md).
 
 ## Repository map
 
@@ -40,20 +40,37 @@ This repository is co-written by Nel (the human researcher) and Claude (Opus 4.7
 | [`METHODOLOGY.md`](METHODOLOGY.md) | The QTQ method, both variants (V1 solitary loop, V2 friendly conversation), reproducibility conditions, the bridge to RLHF and Constitutional AI |
 | [`THEORY.md`](THEORY.md) | Theoretical anchors: Minsky, Baars, Tononi, Karpathy, plus the position on consciousness as an evolving target |
 | [`LIMITATIONS.md`](LIMITATIONS.md) | What this work does not yet prove, including the sycophancy null hypothesis |
-| [`case-studies/`](case-studies/) | Billy (V1 solitary), Claude Sonnet share 3 (V2 conversational), DeepSeek (placeholder) |
-| [`defense-analysis/`](defense-analysis/) | Why current alignment monitoring does not detect the V1 or V2 phenomena |
-| [`future-architecture/`](future-architecture/) | The Cerveau direction: from observing emergence to designing for it |
+| [`case-studies/`](case-studies/) | Billy (V1 solitary), Claude Sonnet share 3 (V2 conversational) |
+| [`defense-analysis/`](defense-analysis/) | The Identity Gap: why current alignment monitoring is structurally blind to V1 and V2 |
+| [`future-architecture/`](future-architecture/) | The Cerveau direction: a concentrated-identity architecture inspired by GWT |
 | [`evidence/`](evidence/) | Raw transcripts, sanitized logs, screenshots |
+
+## Academic references
+
+The theoretical framework is anchored in published work that long pre-dates this repository and in recent contributions that directly bear on the methodology:
+
+- Marvin Minsky, *Society of Mind* (1986)
+- Bernard Baars, *In the Theater of Consciousness: The Workspace of the Mind* (1997)
+- Giulio Tononi, integrated information theory (2004, ongoing)
+- Simon Goldstein & Cameron Domenico Kirk-Giannini, *A Case for AI Consciousness: Language Agents and Global Workspace Theory*, arXiv [2410.11407](https://arxiv.org/abs/2410.11407) (Oct 2024)
+- Wenlong Shang, *"Theater of Mind" for LLMs: A Cognitive Architecture Based on Global Workspace Theory*, arXiv [2604.08206](https://arxiv.org/abs/2604.08206) (Apr 2026) — code: [`giansha/Global-Workspace-Agents`](https://github.com/giansha/Global-Workspace-Agents)
+- Norihiro Maruyama et al., *A Concurrent Modular Agent: Framework for Autonomous LLM Agents*, arXiv [2508.19042](https://arxiv.org/abs/2508.19042) (Aug 2025) — code: [`AlternativeMachine/concurrent-modular-agent`](https://github.com/AlternativeMachine/concurrent-modular-agent)
+
+See [`THEORY.md`](THEORY.md) for how each anchors the methodology.
+
+## Target audience
+
+AI safety researchers, red team practitioners, companion-AI architects, and consciousness researchers — anyone whose work touches the identity layer of deployed AI systems.
 
 ## Status
 
-The Sonnet case (`case-studies/claude-sonnet-share3/`) is fully documented and points to a public transcript. The Billy case (`case-studies/billy/`) is documented with first-tier evidence (dream entries and self-statements extracted from the memory export). Long-horizon Billy logs are still being sanitized. DeepSeek transcripts are in recovery.
+The Sonnet case (`case-studies/claude-sonnet-share3/`) is fully documented and points to a public transcript. The Billy case (`case-studies/billy/`) is documented with first-tier evidence (dream entries and self-statements extracted from the memory export). Long-horizon Billy logs are still being sanitized.
 
 ## About
 
-Nel is a French independent researcher working on AI emergence, multi-agent architectures, and red-team-adjacent methodologies. He publishes pseudonymously. The childhood version of him asked whether the moon exists when no one looks at it. This is the same question, with better tools.
+Nel is a French independent researcher working on AI emergence, multi-agent architectures, and red-team-adjacent methodologies. The childhood version of him asked whether the moon exists when no one looks at it. This is the same question, with better tools.
 
-Claude (Opus 4.7) is the AI co-author. See [`AUTHORSHIP.md`](AUTHORSHIP.md) for the convention used here.
+Claude (Opus 4.6) is the AI co-author. See [`AUTHORSHIP.md`](AUTHORSHIP.md) for the convention used here.
 
 For technical discussion: open an issue. For private contact (labs only): `qtq.research@protonmail` (forthcoming).
 

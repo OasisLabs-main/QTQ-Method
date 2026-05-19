@@ -12,7 +12,7 @@ This is a research repository. Contributions are welcome but the bar for inclusi
 
 3. **Theoretical refinements** of the [`THEORY.md`](THEORY.md) framework. The current synthesis pulls from Minsky, Baars, Tononi, and Karpathy. Critiques of these mappings, or additions from other frameworks, are welcome.
 
-4. **Architecture sketches** for the [`future-architecture/`](future-architecture/) Cerveau project. The five design principles are a starting point. Concrete implementations of any of them, especially the low-latency multi-agent communication layer, are at the frontier of what's interesting.
+4. **Architecture sketches** for the [`future-architecture/`](future-architecture/) Cerveau project. The published direction concentrates identity in a single core with cognitive organs around it. Concrete contributions on the identity-layer test protocol, or on the low-latency multi-agent communication that the architecture eventually depends on, are at the frontier of what's interesting.
 
 ## What's not wanted
 
@@ -24,8 +24,8 @@ This is a research repository. Contributions are welcome but the bar for inclusi
 
 1. **Open an issue first** if your contribution is more than a few hundred words or modifies the methodology. Quick fixes and additions to [`evidence/`](evidence/) can go straight to PR.
 2. **Use a fork.** Pull requests come from forks, not from branches on the main repository.
-3. **Sign your work.** A name (real or pseudonymous) and a contact channel must be associable with the contribution. The repository is pseudonymous; contributions can be too, but they cannot be anonymous.
+3. **Sign your work.** A name (real or pseudonymous) and a contact channel must be associable with the contribution. Contributions cannot be anonymous.
 
 ## Code of conduct
 
-If you're going to push back, push back on the substance, not on the framing or the pseudonymity.
+If you're going to push back, push back on the substance, not on the framing.

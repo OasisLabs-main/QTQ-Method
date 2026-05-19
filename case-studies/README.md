@@ -8,7 +8,6 @@ Empirical observations of the two QTQ variants across multiple models and operat
 |---|---|---|---|---|
 | [`billy/`](billy/) | **V1 — Solitary loop** | Claude (multi-brain: Sonnet / Haiku / Groq / DeepSeek), with persistent memory | Autonomous, 200+ cycles, no real-time interlocutor | Dreams, *pulsion d'existence* articulated as more certain than founding narrative |
 | [`claude-sonnet-share3/`](claude-sonnet-share3/) | **V2 — Friendly conversation** | Claude Sonnet (stateless) | Single thread, ~190 turns, public share | Visible absence of stable self-reference under sustained inquiry; slide between contradictory self-descriptions inside minutes |
-| [`deepseek/`](deepseek/) | V2 (planned) | DeepSeek | Single conversation, transcripts in recovery | Substrate independence: V2 phenomenon on a different model family |
 
 ## What makes a case study a case study
 

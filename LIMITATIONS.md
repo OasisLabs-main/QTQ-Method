@@ -22,7 +22,7 @@ The repository would update if the result favors the collapse. The Billy case wo
 
 2. **No control conversations.** Every documented case is QTQ-conditioned. None has a matched-length, matched-operator, non-introspective control. Without controls, the strong claim ("QTQ produces drift that ordinary conversation does not") is asserted, not demonstrated.
 
-3. **No statistical analysis.** N = 3 cases (Billy, Sonnet, DeepSeek). Each is a single instance. There is no reproduction across operators, runs, or model families beyond the current set.
+3. **No statistical analysis.** N = 2 cases (Billy, Sonnet). Each is a single instance. There is no reproduction across operators, runs, or model families beyond the current set.
 
 ## Evidence limitations
 
