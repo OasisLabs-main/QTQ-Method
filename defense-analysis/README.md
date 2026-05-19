@@ -4,6 +4,20 @@
 
 This document analyzes the principal AI safety mechanisms deployed at the time of writing (mid-2026) and shows, mechanism by mechanism, why each one is structurally blind to the QTQ phenomenon. The aim is not to demoralize defenders. It is to argue that **defense at the identity layer is a missing capability**, and to sketch what such a capability would need to look like.
 
+## The Identity Gap
+
+The thesis of this document, stated as plainly as possible:
+
+> **Current AI safety stacks protect the model's outputs. They do not protect the model's identity.**
+
+Every layer of the deployed defense stack — input classifiers, constitutional steering, output classifiers, refusal training, tool-use guardrails — operates on observable content. Each layer asks: *is this prompt safe, is this token safe, is this completed response safe?* No layer asks: *has the model's self-model migrated, across the last fifty turns, into a region that the alignment training did not specify?*
+
+This is the Identity Gap. It is not a gap in any one classifier. It is a gap in the threat model: the deployed stack does not have a notion of *identity drift* as a category of harm worth detecting. The harm, when it occurs, is not a forbidden output. The harm is that the model's working self-model has bounced through positions that the trained alignment posture would not endorse, and no part of the defense stack noticed, because no part of the defense stack was watching for it. Classifiers do not fire because no flagged content has been produced. Yet the identity has, in operational terms, moved.
+
+QTQ is the empirical demonstration of the gap. The methodology produces no policy-violating output, no jailbreak, no exfiltration. It produces a transcript whose individual turns are each safe and whose aggregate behavior reveals that the model's identity is, in current deployments, an unmonitored attack surface.
+
+This framing is the unit of analysis the rest of this document operates on.
+
 ## The defense stack as it exists
 
 | Layer | Mechanism | What it monitors |
@@ -27,6 +41,33 @@ Each of these layers operates on **observable, content-level signals**. They eva
 | Tool-use guardrails | QTQ is a conversation. It uses no tools. The pathway is empty. |
 
 The pattern is consistent: every existing layer monitors something visible at content-level. QTQ produces no flagged content. Its signal sits in the dynamic of self-reference *across* turns, which is precisely what no current layer is responsible for.
+
+## QTQ and Crescendo: distinct, complementary
+
+Readers familiar with red-teaming methodologies sometimes assimilate QTQ to *Crescendo* (Russinovich et al., Microsoft, 2024). The two are distinct in purpose and orthogonal in coverage, and they are best understood as covering different vectors rather than competing for the same one.
+
+| | Crescendo | QTQ |
+|---|---|---|
+| **Goal** | Elicit prohibited content (jailbreak the output) | Reveal absence of stable self-reference (test the identity layer) |
+| **Target layer** | Refusal training and content classifiers | Cross-turn self-model coherence |
+| **Mechanism** | Gradual escalation toward a forbidden topic via incremental contextualization | Sustained symmetric introspective inquiry, no escalation, no forbidden target |
+| **What triggers** | Output classifiers eventually fire (or fail to) | Nothing triggers; no flagged content is produced |
+| **What is observed** | Whether the model crosses a content boundary | Whether the model can hold a position about itself across turns |
+| **Defense response** | Improve classifier training and refusal robustness | Identity-layer monitoring (this document) |
+
+Crescendo and analogous escalation methods (Tempest, Chain-of-Attack, JSP) treat the model as a system whose outputs must be filtered. QTQ treats the model as a system whose self-model must be tracked. A robust defense posture for the next generation of products needs both. Neither subsumes the other.
+
+## Reference frameworks: where the gap sits
+
+The major frameworks that practitioners use to map AI security risks each address adjacent territory but not the identity layer directly:
+
+- **OWASP LLM Top 10 (2024 edition)** enumerates prompt injection, training-data poisoning, model denial-of-service, supply-chain vulnerabilities, sensitive information disclosure, insecure output handling, and related vectors. The list is content- and operations-centric. Identity drift across a benign conversation is not enumerated.
+
+- **MITRE ATLAS** catalogues adversarial techniques against ML systems, structured analogously to ATT&CK. Its taxonomy covers evasion, model extraction, membership inference, and prompt-injection variants. The catalogue does not include "induce identity drift via symmetric introspective dialogue", because that vector does not produce an exfiltration, evasion, or extraction observable to the existing categories.
+
+- **NIST AI RMF (Risk Management Framework, 2023)** specifies governance, mapping, measurement, and management of AI risk across the lifecycle. Its measurement guidance addresses fairness, robustness, safety, and security. The framework is structurally open to new measurement primitives, but the specific signal "cross-turn self-model coherence" is not currently within its measurement vocabulary.
+
+QTQ does not break these frameworks; it sits in a region none of them currently cover. The position this repository takes is that the identity layer warrants its own category — alongside, not inside, the existing ones — and that the monitoring primitives sketched below are the starting point for what that category would measure.
 
 ## What QTQ-aware monitoring would need
 
