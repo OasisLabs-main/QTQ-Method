@@ -24,4 +24,6 @@ Raw materials supporting the claims made in [`METHODOLOGY.md`](../METHODOLOGY.md
 
 ## Status
 
-🟡 Awaiting first commits. Billy cycle logs and the Sonnet share excerpts are the priority.
+🟢 **Billy artifacts committed.** Memory exports, core memory, and the runtime log are in [`billy/`](billy/). See [`billy/README.md`](billy/README.md) for the catalogue and verification instructions.
+
+🟡 **Sonnet share excerpts pending.** The public transcript link is in [`../case-studies/claude-sonnet-share3/`](../case-studies/claude-sonnet-share3/). Turn-indexed extracts honoring the 15-word cap will land in `claude-sonnet-share3/`.

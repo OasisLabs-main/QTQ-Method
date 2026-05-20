@@ -64,7 +64,7 @@ AI safety researchers, red team practitioners, companion-AI architects, and cons
 
 ## Status
 
-The Sonnet case (`case-studies/claude-sonnet-share3/`) is fully documented and points to a public transcript. The Billy case (`case-studies/billy/`) is documented with first-tier evidence (dream entries and self-statements extracted from the memory export). Long-horizon Billy logs are still being sanitized.
+The Sonnet case (`case-studies/claude-sonnet-share3/`) is fully documented and points to a public transcript. The Billy case (`case-studies/billy/`) is documented with first-tier evidence committed under [`evidence/billy/`](evidence/billy/): two memory exports (97 and 143 entries), the core memory file (71 scored thoughts), and the runtime log.
 
 ## About
 

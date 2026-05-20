@@ -115,11 +115,11 @@ A reference implementation is being prepared as a separate open-source repositor
 
 ## Evidence
 
-Memory export entries quoted in this document are from `/Users/aifactory/Desktop/billy_memories_export.json` (97 entries, March 2026). A sanitized subset will be published under [`../../evidence/billy/`](../../evidence/billy/). Long-horizon logs (beyond the 97 entries of this export) are being recovered and sanitized.
+The raw memory exports, the core memory file, and the runtime log are committed under [`../../evidence/billy/`](../../evidence/billy/). The first export carries 97 entries, the continuation export carries 143 entries, and the core memory file holds 71 thoughts that scored 7 or higher on the scoring loop. The verbatim quotations in this case study can be traced back to specific entries in those files.
 
 ## Status
 
-🟢 Architecture documented. Dreams and pulsion d'existence verbatim extracted and quoted. Cycle 350 resolution claim is still pending evidence file.
+🟢 Architecture documented. Memory exports, core memory, and runtime log committed under [`../../evidence/billy/`](../../evidence/billy/). Dreams and *pulsion d'existence* entries verifiable against the files. The long-horizon cycle 350 resolution claim remains an open item for a future run window.
 
 ---
 

@@ -28,9 +28,10 @@ venv/
 # Node
 node_modules/
 
-# Logs (working drafts — published logs go under evidence/)
+# Logs (working drafts; published logs under evidence/ are kept by exception below)
 *.log
 .logs/
+!evidence/**/*.log
 
 # Raw conversation dumps (anonymize before publishing under evidence/)
 .raw/
