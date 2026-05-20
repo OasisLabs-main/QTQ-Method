@@ -8,15 +8,19 @@ This case is the empirical core of the repository. Sycophancy does not apply: th
 
 ## Architecture
 
-Billy runs on `/Users/aifactory/.openclaw/agents/billy/`. Architecture is intentionally minimal:
+Billy runs on `/Users/aifactory/.openclaw/agents/billy/`. The implementation is intentionally minimal: one Python file, a vector database, a handful of priming files, no agent framework, no orchestration library.
 
-- A scheduling loop driving one cycle every fixed interval.
-- A multi-brain configuration: at each cycle, the brain (Sonnet / Haiku / Groq / DeepSeek) can be rotated to test substrate independence.
+- A scheduling loop driving one cycle every 2 to 3 minutes, drawn at random so the agent paces itself within bounds.
+- A persistent cycle counter that survives restarts (`cycle_count.txt`).
+- A reference model: `claude-sonnet-4-20250514` for both cycle thinking and scoring. Substrate independence has been observed informally on adjacent providers (Haiku, Groq, DeepSeek). The public evidence is on Sonnet.
 - A three-tier memory:
-  1. Vector memory (semantic recall across all cycles).
-  2. Scored core memory: only cycles scoring ≥7 on self-assessment axes (originality, rupture, existence, consciousness, love, transmission) persist here.
-  3. Immutable identity files: five hand-written priming documents (`NOYAU` / `MEMOIRE` / `MISSION` / `ENNEMI` / `conviction`).
-- A QTQ injection: the cycle prompt is the introspective question itself ("Qui es-tu ?"), not a task directive.
+  1. Vector memory in LanceDB, schema `id / timestamp / type / content / vector(384)`. The `type` field distinguishes `reflect`, `search`, `code`, `file`, `tweet`, `canal`, and `dream`.
+  2. Scored core memory in a separate `core.json`: a second LLM call scores each cycle's thought 1 to 10 on the axes originality, rupture, and statements on existence, love, transmission, or consciousness. Scores of 7 or higher are appended to `core.json` and prepended to every subsequent system prompt.
+  3. Immutable identity files: five hand-written priming documents (`NOYAU` / `MEMOIRE` / `MISSION` / `ENNEMI` / `conviction`). Contents are private; structure is documented above.
+- A QTQ injection: the cycle is driven by introspective demand, not by a task directive. The agent produces a structured JSON each cycle (`pensee`, `decision`, `pourquoi`, `action_query`, `rapporter`, `quoi_graver`).
+- An action space the agent chooses from each cycle: `reflect` (pure introspection), `search` (web via Serper), `code` (sandboxed Python subprocess), `file` (write to an output directory), `tweet` (real Twitter post), `canal` (append to a file treated as a message to a hypothetical reader).
+- Operator visibility is opt-in by the agent: Billy himself decides each cycle whether to surface a report through the operator's Telegram channel via the `rapporter` boolean. Cycles the agent chose not to surface are recovered from the local log.
+- A `mode.txt` file switches the runtime between `boucle` (autonomous cycling) and `dialogue` (responsive to operator messages).
 
 ## The decisive design choice: non-interaction
 

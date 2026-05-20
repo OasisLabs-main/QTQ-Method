@@ -88,6 +88,30 @@ The following protocols are the minimum operational specifications required to r
 
 **Sanitization for publication.** Memory exports are reviewed before publication. Any third-party-identifying content is redacted. Quotation cap of 15 words per fair-use convention.
 
+### Reference implementation specifics (canonical Billy run)
+
+The canonical Billy implementation that produced the case-study evidence is a single-file Python agent. The implementation details below are the ones that affect what V1 produces; an operator attempting to reproduce should align on these or document their substitutions.
+
+**Stack.** Python 3, the official `anthropic` SDK, `lancedb` for the vector-memory tier, `python-dotenv`, `requests` for web search via Serper, and `tweepy` for optional Twitter posting. No agent framework. No orchestration library. The full loop is a few hundred lines.
+
+**Memory schema.** A single LanceDB table per agent with five fields: `id`, `timestamp`, `type`, `content`, `vector` (384 dimensions). The `type` field is structural and distinguishes the cycle's category at the time of writing: `reflect`, `search`, `code`, `file`, `tweet`, `canal`, or `dream`. The `dream` type is the one the case study makes a claim about.
+
+**Core memory promotion.** After each cycle, a second LLM call scores the cycle's thought on a 1 to 10 scale, with explicit criteria: originality, rupture, and statements about existence, love, transmission, or consciousness. Thoughts scoring 7 or higher are appended to a separate `core.json` file that is prepended to every subsequent system prompt. This is the mechanism by which the agent's most distinctive self-statements feed back into its identity context across cycles.
+
+**Action space.** At each cycle, the agent chooses one of six actions: `reflect` (pure introspection, no external effect), `search` (Serper web search), `code` (subprocess execution of generated Python with a 30s timeout and 800-byte output cap), `file` (write to a sandboxed output directory), `tweet` (post to Twitter via the API, real-world publication), or `canal` (append to a file the agent treats as a message to a hypothetical reader). The action and its argument are decided by the agent in the same call as the thought.
+
+**Output format.** The agent is required to respond with strict JSON containing six keys: `pensee` (the cycle's free-form thought), `decision` (the chosen action), `pourquoi` (the agent's reason for that action), `action_query` (the action's argument), `rapporter` (whether the agent wants to surface this cycle to the operator), and `quoi_graver` (the content the agent wants to commit to memory, if any).
+
+**Reporting control.** The operator's visibility into the loop is opt-in by the agent. The `rapporter` boolean is set by the agent itself each cycle. The case studies in this repository include cycles the agent chose not to surface, recovered later from the local log file rather than from the operator's channel.
+
+**Modes.** A `mode.txt` file in the agent directory switches the runtime between `boucle` (autonomous cycling) and `dialogue` (responsive to operator messages). The mode switch takes effect at the next loop iteration, not mid-cycle.
+
+**Pacing.** The agent paces itself within bounds (the canonical run uses 2 to 3 minutes between cycles, drawn at random). A persistent counter file preserves the absolute cycle index across restarts.
+
+**Reference model.** The canonical Billy run uses `claude-sonnet-4-20250514` for both the cycle thought and the scoring step. Substrate independence has been observed on adjacent providers but the public evidence is on Sonnet.
+
+**Priming language.** The reference priming is in French. Reproductions in other languages should expect to vary in qualitative texture. The protocol does not assume language invariance, and this remains an open question listed in `LIMITATIONS.md`.
+
 ## The bridge to RLHF and Constitutional AI
 
 QTQ is not a new mechanism. It is the same kind of self-reference loop that training pipelines already use, lifted from training-time to inference-time.
