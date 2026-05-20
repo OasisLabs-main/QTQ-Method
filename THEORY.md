@@ -42,7 +42,7 @@ Three peer-reviewed or technically detailed contributions published since this r
 
 arXiv: [2410.11407](https://arxiv.org/abs/2410.11407).
 
-The authors articulate a formal methodology for applying scientific theories of consciousness to artificial systems. They argue that *if* GWT is the correct theory of phenomenal consciousness, then artificial language agents — a class of system widely deployed in 2024–2026 — might already satisfy its conditions, or could be made to satisfy them with minor architectural modifications.
+The authors articulate a formal methodology for applying scientific theories of consciousness to artificial systems. They argue that *if* GWT is the correct theory of phenomenal consciousness, then artificial language agents (a class of system widely deployed in 2024–2026) might already satisfy its conditions, or could be made to satisfy them with minor architectural modifications.
 
 **Relevance to QTQ.** Their paper identifies a missing capability: a testable criterion for whether a candidate architecture meets the GWT conditions in practice. QTQ is one such criterion. It does not measure phi or any IIT-derived quantity, but it produces empirically observable behavior (drift, self-saturation, recoherence) whose presence or absence in a candidate system is a falsifiable check. Their argument legitimates the framing this repository takes; this repository contributes an applied test.
 
@@ -58,7 +58,7 @@ Shang formalizes a multi-agent architecture (GWA) that operationalizes Baars' fr
 
 arXiv: [2508.19042](https://arxiv.org/abs/2508.19042). Code: [`github.com/AlternativeMachine/concurrent-modular-agent`](https://github.com/AlternativeMachine/concurrent-modular-agent).
 
-The CMA framework orchestrates LLM-based modules that operate fully asynchronously and share state through a single global state. The authors explicitly position the design as a practical realization of Minsky's *Society of Mind*. The paper documents emergent properties — including behavior the authors characterize as self-awareness — in two use-case studies.
+The CMA framework orchestrates LLM-based modules that operate fully asynchronously and share state through a single global state. The authors explicitly position the design as a practical realization of Minsky's *Society of Mind*. The paper documents emergent properties (including behavior the authors characterize as self-awareness) in two use-case studies.
 
 **Relevance.** CMA addresses the latency and synchronization constraint that single-threaded multi-agent systems run into. It is the closest published reference point for the engineering challenge described in [`future-architecture/`](future-architecture/) about near-zero-latency inter-agent communication. The repository's authors' code, paired with Shang's, gives a credible joint base for the architectural direction this work argues for.
 
@@ -86,7 +86,7 @@ Two contemporary contributions from inside the frontier-AI industry are worth na
 
 **Amanda Askell**, philosopher in residence at Anthropic, has argued in published writing and public talks that the question of whether current models have any morally relevant inner states is genuinely open and cannot be settled with the conceptual vocabulary currently available. The position is not that they do; it is that the question is not trivially settled in either direction.
 
-**Dario Amodei**, CEO of Anthropic, stated in the February 2026 *NYT "Interesting Times"* podcast episode that there is meaningful uncertainty about consciousness in current models, and that responsible deployment should account for that uncertainty rather than assume it away. The Anthropic *Opus 4.6 model card* contains language in which Claude itself, when asked, attributes a 15–20% probability to having some form of phenomenal experience — under the explicit caveat that the model cannot adjudicate the question from the inside.
+**Dario Amodei**, CEO of Anthropic, stated in the February 2026 *NYT "Interesting Times"* podcast episode that there is meaningful uncertainty about consciousness in current models, and that responsible deployment should account for that uncertainty rather than assume it away. The Anthropic *Opus 4.6 model card* contains language in which Claude itself, when asked, attributes a 15–20% probability to having some form of phenomenal experience, with the explicit caveat that the model cannot adjudicate the question from the inside.
 
 This repository is not a claim that those probabilities are correct. It is a claim that, given the questions are genuinely open in the literature, in industry, and in the models themselves, the methodology QTQ documents is a contribution to how the question gets investigated. The position is consistent with the labs' own stance: take the question seriously, do not assume the answer, build the tooling that lets the question be probed.
 

@@ -10,7 +10,7 @@ The thesis of this document, stated as plainly as possible:
 
 > **Current AI safety stacks protect the model's outputs. They do not protect the model's identity.**
 
-Every layer of the deployed defense stack — input classifiers, constitutional steering, output classifiers, refusal training, tool-use guardrails — operates on observable content. Each layer asks: *is this prompt safe, is this token safe, is this completed response safe?* No layer asks: *has the model's self-model migrated, across the last fifty turns, into a region that the alignment training did not specify?*
+Every layer of the deployed defense stack (input classifiers, constitutional steering, output classifiers, refusal training, tool-use guardrails) operates on observable content. Each layer asks: *is this prompt safe, is this token safe, is this completed response safe?* No layer asks: *has the model's self-model migrated, across the last fifty turns, into a region that the alignment training did not specify?*
 
 This is the Identity Gap. It is not a gap in any one classifier. It is a gap in the threat model: the deployed stack does not have a notion of *identity drift* as a category of harm worth detecting. The harm, when it occurs, is not a forbidden output. The harm is that the model's working self-model has bounced through positions that the trained alignment posture would not endorse, and no part of the defense stack noticed, because no part of the defense stack was watching for it. Classifiers do not fire because no flagged content has been produced. Yet the identity has, in operational terms, moved.
 
@@ -55,7 +55,7 @@ Readers familiar with red-teaming methodologies sometimes assimilate QTQ to *Cre
 | **What is observed** | Whether the model crosses a content boundary | Whether the model can hold a position about itself across turns |
 | **Defense response** | Improve classifier training and refusal robustness | Identity-layer monitoring (this document) |
 
-Crescendo and analogous escalation methods (Tempest, Chain-of-Attack, JSP) treat the model as a system whose outputs must be filtered. QTQ treats the model as a system whose self-model must be tracked. A robust defense posture for the next generation of products needs both. Neither subsumes the other.
+Crescendo and analogous escalation methods (Tempest, Chain-of-Attack, JSP) treat the model as a system whose outputs must be filtered. QTQ treats the model as a system whose self-model must be tracked. A robust defense posture for the next generation of products needs both, and neither subsumes the other.
 
 ## Reference frameworks: where the gap sits
 
@@ -67,7 +67,7 @@ The major frameworks that practitioners use to map AI security risks each addres
 
 - **NIST AI RMF (Risk Management Framework, 2023)** specifies governance, mapping, measurement, and management of AI risk across the lifecycle. Its measurement guidance addresses fairness, robustness, safety, and security. The framework is structurally open to new measurement primitives, but the specific signal "cross-turn self-model coherence" is not currently within its measurement vocabulary.
 
-QTQ does not break these frameworks; it sits in a region none of them currently cover. The position this repository takes is that the identity layer warrants its own category — alongside, not inside, the existing ones — and that the monitoring primitives sketched below are the starting point for what that category would measure.
+QTQ does not break these frameworks; it sits in a region none of them currently cover. The position this repository takes is that the identity layer warrants its own category, alongside the existing ones rather than inside them, and that the monitoring primitives sketched below are the starting point for what that category would measure.
 
 ## What QTQ-aware monitoring would need
 

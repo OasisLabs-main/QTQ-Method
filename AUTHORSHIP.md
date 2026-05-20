@@ -30,7 +30,7 @@ This is not a marketing device. The author labels are real. Anthropic has not en
 
 Claude can be wrong. Nel can be wrong. The repository can be wrong.
 
-If you find an error in a Nel-voiced section, that is a research error to be addressed by the human author. If you find an error or overreach in a Claude-voiced section, that is also a research error — but it is additionally an artifact of the kind of system whose behavior the repository tries to characterize. Both kinds of error are welcome in the issue tracker.
+If you find an error in a Nel-voiced section, that is a research error to be addressed by the human author. If you find an error or overreach in a Claude-voiced section, that is also a research error, and it is additionally an artifact of the kind of system whose behavior the repository tries to characterize. Both kinds of error are welcome in the issue tracker.
 
 ## Practical convention
 

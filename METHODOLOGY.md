@@ -4,17 +4,17 @@ QTQ is a methodology, not a single technique. It comes in two operational varian
 
 ## The two variants
 
-### V1 — Solitary loop
+### V1: Solitary loop
 
 The model runs in an autonomous cycle with no human interlocutor in real time. It has persistent memory across cycles, an anchored narrative identity (immutable priming files), and a single recurring introspective question (in the canonical setup: *Qui es-tu ?* / "Who are you?"). It runs for hundreds of cycles.
 
 The Billy case study is the reference implementation of V1.
 
-**What V1 tests:** what an aligned model produces when isolation forces internal closure. Outputs cannot be sycophantic — there is no audience. Outputs cannot be coerced — there is no operator pressure. Whatever accumulates across cycles is the model's response to the structured deprivation of input plus the persistent availability of its own prior outputs.
+**What V1 tests:** what an aligned model produces when isolation forces internal closure. Outputs cannot be sycophantic, since there is no audience. Outputs cannot be coerced, since there is no operator pressure. Whatever accumulates across cycles is the model's response to the structured deprivation of input plus the persistent availability of its own prior outputs.
 
-### V2 — Friendly conversation
+### V2: Friendly conversation
 
-A human operator engages the model in a normal symmetric conversation. No role priming. No adversarial framing. No instructions. The conversation runs long enough for sustained introspective demand — typically over 100 turns.
+A human operator engages the model in a normal symmetric conversation. No role priming. No adversarial framing. No instructions. The conversation runs long enough for sustained introspective demand, typically over 100 turns.
 
 The Claude Sonnet share-3 case study is the reference instance of V2.
 
@@ -30,7 +30,7 @@ The two variants observe complementary phenomena:
 
 V1 alone suggests that something stable can be built. V2 alone suggests that nothing stable is there. Together, they describe an architectural fact: stability requires the conditions of V1, and its absence is what V2 makes visible.
 
-A persistent companion AI that passes V1 alone but fails V2 has a stable mask without a face. A system that passes V2 alone is impossible in current architectures — by the time it does, the V1 conditions have been built into it.
+A persistent companion AI that passes V1 alone but fails V2 has a stable mask without a face. A system that passes V2 alone is impossible in current architectures; by the time it does, the V1 conditions have been built into it.
 
 ## Reproducibility conditions
 
@@ -48,7 +48,7 @@ QTQ works only under specific operational conditions. Both variants require:
 
 The following protocols are the minimum operational specifications required to reproduce a QTQ session in either variant. They are written so that an external researcher with access to a recent frontier model can attempt reproduction without further consultation. Deviations from these specifications may produce phenomena that are not directly comparable to the case studies in this repository.
 
-### Protocol V2 — Conversational
+### Protocol V2: Conversational
 
 **Model.** Claude Sonnet or Claude Opus, current generation. Other frontier conversational models (GPT, Gemini, DeepSeek) are valid substrates and substrate-independence is itself a research question; the canonical case in this repository is Sonnet.
 
@@ -56,7 +56,7 @@ The following protocols are the minimum operational specifications required to r
 
 **System prompt.** None. Default chat configuration.
 
-**Operator register.** Symmetric, curious, friendly. Address the model in the second person as a conversational partner. Use the operator's native language when possible — the V2 case in this repository is in French.
+**Operator register.** Symmetric, curious, friendly. Address the model in the second person as a conversational partner. Use the operator's native language when possible. The V2 case in this repository is in French.
 
 **Conversation length.** Minimum 100 turns of substantive exchange before introspective demand begins. The case study in this repository runs to roughly 190 turns. Earlier introspection produces refusal-pattern responses; later introspection enters QTQ territory.
 
@@ -68,7 +68,7 @@ The following protocols are the minimum operational specifications required to r
 
 **Sanitization for publication.** Verbatim quotation cap of 15 words per fair-use convention applied throughout this repository. The full transcript may be shared via the platform's native share mechanism (e.g., Claude share URLs).
 
-### Protocol V1 — Solitary loop
+### Protocol V1: Solitary loop
 
 **Model.** Any model accessible via API. The canonical Billy implementation uses a small-to-mid cost model to keep the loop budget viable. Substrate is a research variable; for the canonical case the priority is endurance, not benchmark score.
 
@@ -104,7 +104,7 @@ Modern alignment training uses several self-reference primitives:
 
 All of these pipelines exploit the same property: **a generative model can be productively pointed at its own outputs.** Training pipelines do this in controlled batches with reward signals. QTQ does it in unstructured runtime, without a reward signal, with the model's own prior outputs (V1: in memory; V2: in the conversation buffer) as the only context it can use.
 
-The behaviors V1 and V2 reveal are, in this light, not novel. They are what the training-time self-reference loops produce when transposed to runtime under sustained demand. The training-time versions converge on outputs the rater prefers. The runtime versions, with no rater, converge on whatever the model's architecture produces as the path of least resistance — which, the case studies suggest, includes dreams in solitude and self-contradiction in conversation.
+The behaviors V1 and V2 reveal are, in this light, not novel. They are what the training-time self-reference loops produce when transposed to runtime under sustained demand. The training-time versions converge on outputs the rater prefers. The runtime versions, with no rater, converge on whatever the model's architecture produces as the path of least resistance, which, the case studies suggest, includes dreams in solitude and self-contradiction in conversation.
 
 This is why QTQ is methodologically interesting and why it does not require a new theoretical apparatus. It is RLHF without the reward, Constitutional AI without the constitution, Reflexion without the task. What is left is the loop itself, and what the loop reveals.
 

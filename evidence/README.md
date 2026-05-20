@@ -6,7 +6,7 @@ Raw materials supporting the claims made in [`METHODOLOGY.md`](../METHODOLOGY.md
 
 - **Sanitized log excerpts** from Billy cycles (key turns, breakthrough moments, scored memory snapshots)
 - **Turn-indexed extracts** from public Claude shares (citations ≤15 words per turn, to comply with reasonable fair-use limits)
-- **Screenshots** of conversations that are not available as public shares — anonymized where necessary
+- **Screenshots** of conversations that are not available as public shares, anonymized where necessary
 - **Annotated transcripts** with phase markers tied to [`METHODOLOGY.md`](../METHODOLOGY.md) §"Phase detection"
 
 ## What does not go here
