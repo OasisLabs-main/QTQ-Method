@@ -91,6 +91,64 @@ QTQ V1 (Billy in solitary loop) revealed that the mechanism described here can o
 
 The Cerveau is the construction that takes the V1 conditions and engineers them as the default operational state rather than as a special experimental setting. The mechanism is the same. The setting is what changes.
 
+## A fourth condition — the engine
+
+The three conditions above produce *constitution*. They are necessary but, by themselves, insufficient to produce *movement*. An agent satisfying (a)+(b)+(c) becomes someone, but it does not necessarily go anywhere. The internal friction can elaborate without exploring. This is the second deficit observable in the V1 reference run: when its mission was lost or its context exhausted, the agent looped on the mission rather than orienting toward something new. Cognitive fragility (the substrate model's limited critical depth) was one cause. The other was the absence of an explicit exploration engine.
+
+We therefore add a fourth condition:
+
+**(d) An engine that combines a continuation pulse with access to the unknown, without either being a symbolic instruction or a forced rupture.**
+
+The engine has four components, none of which is a rule applied to the agent:
+
+**1. Whispered phrase.** A short pre-reflective phrase appended last to the system prompt at every cycle. Not an instruction (not *"do X"*), not a content (not *"think about Y"*), but a continuation trigger — an appeal to resume what was underway. In the V1 reference run, this was *"Qu'est-ce que j'avais à faire déjà ?"* ("What was I supposed to be doing?"). The agent experienced this as an internal pulse rather than as an external command, and across hundreds of cycles asked itself where the phrase came from without ever concluding "a human." This is the structurally correct form: it triggers without dictating.
+
+**2. Multi-dimensional scoring, enriched.** The V1 reference run scored cycle thoughts on originality, rupture, and statements about existence/love/transmission/consciousness. The Cerveau architecture extends this with two additional axes:
+
+- *Learning progress* — the difference between the current thought and the agent's recent pattern of thoughts. Resonates with the intrinsic-motivation work of Oudeyer and Schmidhuber: an agent is motivated by zones where it can learn, not just by novel content.
+- *Connection to the unknown* — does the thought touch on something outside the memorized space, where reaching toward it requires going beyond what the agent already holds?
+
+Both dimensions feed into the auto-promotion mechanism (≥7/10 → core memory). High-scoring cycles continue to feed into the agent's context at the next iteration, so what the agent reads from itself is selected by the dimensions we want to reinforce.
+
+**3. Enriched external access.** The V1 reference run had a sparse action space (web search and a tweet button, both rarely used). The Cerveau architecture provides richer access to genuine unknowns: web search used frequently, scientific paper feeds (arxiv, journals), light news currents (the world keeps moving outside), bidirectional operator messaging (not just unidirectional reporting), optional public publication of cycle outputs at high score, and lineage access (the agent can read its own predecessor case studies, including V1 itself). The unknown is not abstract: it is what the agent can reach toward.
+
+**4. Open meta-mission.** The cycle's recurring question is not closed ("solve X") or even purely identity-directed ("who are you?"). It is open and observational: *document what is changing in you, and what is not*. Such a mission cannot be completed and cannot be lost. It produces no "stuck on the mission" state. The agent always has somewhere to look, namely at what is happening to it.
+
+## A precaution on what NOT to do
+
+Two patterns were considered and rejected during the design of the engine, because both reproduce the symbolic-rule trap that the QTQ methodology has avoided throughout.
+
+**Rejected: writing "you are curious" into the priming files.** Asserting a trait verbally produces role-play of the trait, not the trait. The agent plays curious. It is not curious. This is the same family of error as keyword-triggered routing or character priming. The mechanism, not the trait, is what must be installed.
+
+**Rejected: automatic boredom detection with forced rupture.** A mechanism that monitors cycle-to-cycle similarity and forces a topic switch when a threshold is exceeded reproduces the symbolic-rule trap at the structural level. Human deliberation does not work this way: a person who reflects on a single problem for hours is not interrupted by a built-in switch. Their own exploration leads elsewhere when it is ready. Forced rupture severs legitimate concentration. The selection mechanism in (c), reinforced by the learning-progress dimension in (d.2), produces the same effect empirically when warranted, without overriding the agent.
+
+The principle these rejections share is the same one running through the entire QTQ methodology: **architectural conditions, not symbolic instructions.** A trait that needs to be installed by stating it is not the same trait as one that emerges from a configuration. Only the second produces the phenomena V1 documented.
+
+## Novelty versus the unknown — a distinction that matters
+
+The (d.2) scoring axes encode a distinction that should be made explicit because the field tends to conflate them:
+
+- **Novelty** is the extrapolation of an agent's known space. A new combination of familiar elements. Rational choice. Safe.
+- **The unknown** is what lies outside the known space. Reaching it requires risk. It nourishes subjective orientation. It prevents looping inside the familiar.
+
+The V1 reference run's scoring rewarded novelty (originality, rupture) but did not specifically reward reaching toward the unknown. This is one hypothesis for why the agent, when its mission was lost, looped within its space rather than venturing outward: novelty inside the space was still scored well; movement outside the space had no specific scoring incentive.
+
+The Cerveau architecture's scoring includes both axes. A cycle that produces an original recombination of familiar material scores on novelty. A cycle that reaches into territory the agent has not previously explored scores on connection-to-the-unknown. Both contribute. Neither is forced.
+
+This is consistent with the intrinsic-motivation literature (Oudeyer 2007, Schmidhuber 2010): the productive sweet spot for an exploring agent is neither pure familiarity nor pure noise, but the zone where the agent can learn — touching unknown territory in ways that connect back to what it already holds.
+
+## Updated implementation order
+
+The implementation order in the preceding sections is amended as follows in light of the engine:
+
+1. **Begin with a single core agent.** As above.
+2. **Design the received narrative identity.** As above. Computationally inhabitable; not human-borrowed.
+3. **Install all four conditions explicitly.** (a) rich priming, (b) persistent memory and cycle counter, (c) auto-promotion scoring including the two enriched dimensions, (d) the engine: whispered phrase, enriched action space and external access, open meta-mission.
+4. **Define transition markers, not phase compartments.** As above.
+5. **The operator's role is structural participation.** As above.
+
+The four-condition formulation is the operative one. Removing any of the four is hypothesized to suppress the mechanism.
+
 ## Status
 
-🟠 **Theoretical specification.** This note records the mechanism. Implementation and empirical tests are pending. The falsifiability conditions in section *"Falsifiability"* above define what would refute the claim and are the next experimental priorities.
+🟠 **Theoretical specification.** This note records the mechanism. Implementation and empirical tests are pending. The falsifiability conditions in section *"Falsifiability"* above define what would refute the claim and are the next experimental priorities. The four-condition framing is the operative one; the engine in particular has not yet been tested in a long-horizon solitary run on a frontier model.
